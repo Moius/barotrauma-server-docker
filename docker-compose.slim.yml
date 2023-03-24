@@ -1,15 +1,13 @@
 version: "3"
 services:
   barotrauma-dedicated-server:
-    container_name: barotrauma-server-slim
+    container_name: baro-slim
     ports:
       - "27015:27015/udp"
       - "27016:27016/udp"
     volumes:
-      - "baro-gamedir:/home/runner/Steam/steamapps/common/Barotrauma Dedicated Server"
+      - /root/Mobiusite_tencent/baro-gamedir:/home/runner/Steam/steamapps/common/Barotrauma Dedicated Server
     build:
       context: .
       dockerfile: Dockerfile.slim
     image: "yanwk/barotrauma-server:slim"
-volumes:
-  baro-gamedir:
