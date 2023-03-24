@@ -65,7 +65,7 @@ RUN set -eux \
     && ln -s /usr/lib/steamcmd/linux32/steamclient.so /home/runner/.steam/sdk32/steamclient.so \
     && ln -s /usr/lib/steamcmd/linux64/steamclient.so /home/runner/.steam/sdk64/steamclient.so \
     && mkdir -p "${GAMEDIR}/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" \
-    && ln -s "${FIX_PATH}" "${FIX_LINKPATH}""
+    && ln -s "${FIX_PATH}" "${FIX_LINKPATH}"
 
 VOLUME $GAMEDIR
 
