@@ -87,10 +87,10 @@ CMD steamcmd +'quit' \
         else \
             steamcmd @ShutdownOnFailedCommand @NoPromptForPassword +login anonymous +app_update ${STEAMAPPID} validate +'quit' ; \
         fi \
-        && if [ ! -f "${GAMEDIR}/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" ] ; then \
+        && if [ ! -d "${GAMEDIR}/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" ] ; then \
             mkdir -p "${GAMEDIR}/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" ; \
         fi \
-        && if [ ! -f "${FIX_PATH}/Daedalic Entertainment GmbH" ] ; then \
+        && if [ ! -h "${FIX_LINKPATH}" ] ; then \
             mkdir -p "${FIX_PATH}/Daedalic Entertainment GmbH" ; \
             ln -s "${FIX_PATH}" "${FIX_LINKPATH}" ; \
         fi \
