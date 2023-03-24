@@ -1,6 +1,7 @@
 name: Test-build Docker Image
 
 on:
+  workflow_dispatch: # Can be manually triggered
   pull_request:
     branches: [ main ]
 
@@ -20,3 +21,4 @@ jobs:
           Dockerfile.slim
           Dockerfile.preload
           Dockerfile.dockerful
+        image: yanwk/barotrauma-server
